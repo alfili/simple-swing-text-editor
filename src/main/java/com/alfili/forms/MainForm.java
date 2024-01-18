@@ -18,10 +18,13 @@ public class MainForm extends JFrame {
         setVisible(true);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        AddTextBtn.setActionCommand("addNewText");
+
         AddTextBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(e.getActionCommand().equals("Добавить")) {
+                if(e.getActionCommand().equals("addNewText")) {
                     AddNewText dialog = new AddNewText();
 
                     dialog.setSize(650, 650);
