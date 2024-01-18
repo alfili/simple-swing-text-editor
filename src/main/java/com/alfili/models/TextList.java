@@ -18,7 +18,6 @@ public class TextList {
     }
 
     public static void deleteTextFromList(int index) {
-        System.out.println(index);
         textList.remove(index);
     }
 }
