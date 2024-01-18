@@ -12,4 +12,13 @@ public class TextList {
     public static void addTextToList(Text text) {
         textList.addElement(text);
     }
+
+    public static Text get(int id) {
+        return textList.get(id);
+    }
+
+    public static void deleteTextFromList(int index) {
+        System.out.println(index);
+        textList.remove(index);
+    }
 }
