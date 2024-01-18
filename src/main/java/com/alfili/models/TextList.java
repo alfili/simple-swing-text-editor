@@ -1,17 +1,15 @@
 package com.alfili.models;
 
-import java.util.ArrayList;
+import javax.swing.*;
 
 public class TextList {
+    public static final DefaultListModel<Text> textList = new DefaultListModel<>();
 
-    // Global static vars
-    private static final ArrayList<Text> textList = new ArrayList<>();
-
-    public static ArrayList<Text> getTextList() {
+    public static DefaultListModel<Text> getTextList() {
         return  textList;
     }
 
     public static void addTextToList(Text text) {
-        textList.add(text);
+        textList.addElement(text);
     }
 }

@@ -1,5 +1,8 @@
 package com.alfili.forms;
 
+import com.alfili.models.Text;
+import com.alfili.models.TextList;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -7,6 +10,8 @@ public class AddNewText extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField NewTextTitle;
+    private JTextArea NewTextBody;
 
     public AddNewText() {
         setContentPane(contentPane);
@@ -42,7 +47,8 @@ public class AddNewText extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
+        Text newText = new Text(NewTextTitle.getText(), NewTextBody.getText());
+        TextList.addTextToList(newText);
         dispose();
     }
 

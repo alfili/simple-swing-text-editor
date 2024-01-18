@@ -1,5 +1,8 @@
 package com.alfili.forms;
 
+import com.alfili.models.Text;
+import com.alfili.models.TextList;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,16 +11,19 @@ public class MainForm extends JFrame {
     private JPanel panel1;
     private JButton AddTextBtn;
     private JButton DeleteTextBtn;
-    private JList TextList;
+    private JList<Text> FormTextList;;
     private JTextPane SelectedText;
 
     public MainForm() {
+
         setSize(1280, 720);
         setTitle("МОЙ! Простой! Текстовый редактор.");
         setContentPane(panel1);
         setVisible(true);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        FormTextList.setModel(TextList.getTextList());
 
         AddTextBtn.setActionCommand("addNewText");
 

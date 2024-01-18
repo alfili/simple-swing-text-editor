@@ -4,13 +4,20 @@ import java.util.Objects;
 
 public class Text {
 
-    // Other
-
     private String title;
     private String body;
 
-    public String getTitle() { return title; }
-    public String getBody() { return body; }
+    public Text(String title, String body) {
+        this.title = title;
+        this.body = body;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public String getBody() {
+        return body;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -34,9 +41,6 @@ public class Text {
 
     @Override
     public String toString() {
-        return "Text{" +
-                "title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                '}';
+        return this.title;
     }
 }
